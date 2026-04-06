@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+class Sensor
+{
+public:
+    static int totalSensors;
+    int id;
+
+    Sensor()
+    {
+        totalSensors++;
+        id = totalSensors;
+    }
+
+    void display()
+    {
+        cout << "Sensor ID: " << id << " | Total Sensors: " << totalSensors << endl;
+    }
+};
+
+int Sensor::totalSensors = 0;
+
+int main()
+{
+    Sensor s1, s2, s3, s4;
+    s1.display();
+    s2.display();
+    s3.display();
+    s4.display();
+    return 0;
+}
